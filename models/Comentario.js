@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    return sequelize.define(
+    let comentario = sequelize.define(
         'Comentario',
         {
             id: {
@@ -27,5 +27,12 @@ module.exports = (sequelize, DataTypes) => {
             timestamps: false
         }
     );
+
+    comentario.associate = (models) => {
+        comentario.belongsTo(models.Post, {foreignKey: 'posts_id', as: 'post'});
+        comentario.belongsTo(models.Usuario, {foreignKey: 'usuarios_id', as: 'usuario'})
+    }
+
+    return comentario;
 
 }
