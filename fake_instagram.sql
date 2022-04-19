@@ -52,7 +52,3 @@ VALUES
     ('Fim de semana já não existe mais!',2,2),
 	('FDS nervoso!',3,2),
     ('Fim de semana foi lindo!',4,2);
-    
-    
-    
-    
